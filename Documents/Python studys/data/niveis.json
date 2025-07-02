@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "admin",
+    "permissoes": [
+      "gerenciar_usuarios",
+      "gerenciar_niveis",
+      "gerenciar_senhas",
+      "remover_produto",
+      "remover_funcionario",
+      "acessar_financeiro",
+      "acessar_dashboard",
+      "ver_contas_receber",
+      "ver_contas_pagar",
+      "ver_fluxo_caixa",
+      "ver_relatorios_financeiros",
+      "editar_produto",
+      "editar_funcionario",
+      "cadastrar_produto",
+      "cadastrar_funcionario",
+      "cadastrar_producao",
+      "remover_producao",
+      "editar_producao",
+      "visualizar_estoque",
+      "ajustar_estoque",
+      "exportar_excel",
+      "visualizar_relatorios",
+      "acessar_tipos_produto",
+      "remover_tipo_produto",
+      "editar_tipo_produto"
+    ]
+  },
+  {
+    "nome": "comum",
+    "permissoes": [
+      "remover_produto",
+      "remover_funcionario",
+      "ver_contas_receber",
+      "ver_contas_pagar",
+      "visualizar_estoque",
+      "cadastrar_producao",
+      "visualizar_relatorios"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "lote": "020725/001",
+        "produto_nome": "Calcinha Microfibra",
+        "funcionario_nome": "Carlos Silva (Revisor)",
+        "quantidade": 1000,
+        "status": "Concluído",
+        "data": "2025-07-02"
+    },
+    {
+        "lote": "020725/002",
+        "produto_nome": "Sutiã Renda Conforto",
+        "funcionario_nome": "Carlos Silva (Revisor)",
+        "quantidade": 1000,
+        "status": "Concluído",
+        "data": "2025-07-02"
+    },
+    {
+        "lote": "020725/003",
+        "produto_nome": "Top Fitness",
+        "funcionario_nome": "Ana Souza (Cortador)",
+        "quantidade": 1000,
+        "status": "Cortando",
+        "data": "2025-07-02"
+    }
+]

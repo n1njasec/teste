@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Sutiã Renda Conforto",
+        "codigo": "ST001",
+        "descricao": "Sutiã de renda confortável, sem aro.",
+        "tipo": "Sutiã"
+    },
+    {
+        "nome": "Calcinha Microfibra",
+        "codigo": "CL002",
+        "descricao": "Calcinha de microfibra básica.",
+        "tipo": "Calcinha"
+    },
+    {
+        "nome": "Cueca Boxer Algodão",
+        "codigo": "CB003",
+        "descricao": "Cueca boxer em algodão macio.",
+        "tipo": "Cueca"
+    },
+    {
+        "nome": "Top Fitness",
+        "codigo": "TP004",
+        "descricao": "Top esportivo para academia.",
+        "tipo": "Top"
+    },
+    {
+        "nome": "Camisola Cetim",
+        "codigo": "CM005",
+        "descricao": "Camisola de cetim elegante.",
+        "tipo": "Camisola"
+    }
+]
