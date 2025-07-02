@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from app_pages import produtos, funcionarios, producoes, tipos_produto, estoque, financeiro, dashboard, relatorio_excel, login, admin
+import os
 
 # --- Login temporariamente desativado ---
 # if "usuario" not in st.session_state:
@@ -59,3 +60,9 @@ elif menu_lateral == "Financeiro":
     financeiro.show()
 elif menu_lateral == "Relatório Excel":
     relatorio_excel.show()
+
+# --- DEBUG: Lista arquivos do diretório do projeto ---
+with st.expander("DEBUG: Arquivos do projeto"):
+    for root, dirs, files in os.walk("."):
+        for name in files:
+            st.write(os.path.join(root, name))
