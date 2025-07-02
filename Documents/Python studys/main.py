@@ -2,11 +2,10 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from app_pages import produtos, funcionarios, producoes, tipos_produto, estoque, financeiro, dashboard, relatorio_excel, login, admin
 
-# --- Login obrigatório ---
-# Se não houver usuário logado, exibe a tela de login e interrompe o fluxo
-if "usuario" not in st.session_state:
-    login.show_login()
-    st.stop()
+# --- Login temporariamente desativado ---
+# if "usuario" not in st.session_state:
+#     login.show_login()
+#     st.stop()
 
 # --- Menu lateral ---
 with st.sidebar:
