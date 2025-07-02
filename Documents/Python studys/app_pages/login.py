@@ -27,6 +27,10 @@ def show_login():
     users = load_users()
     username = st.text_input("Usuário")
     password = st.text_input("Senha", type="password")
+    # DEBUG: Mostra lista de usuários e hash da senha digitada
+    with st.expander("DEBUG (oculto em produção)"):
+        st.write("Usuários carregados:", users)
+        st.write("Hash da senha digitada:", hash_password(password))
     if st.button("Entrar"):
         # Busca usuário e valida senha (hash)
         user = next((u for u in users if u["usuario"] == username and u["senha"] == hash_password(password)), None)
