@@ -4,9 +4,11 @@ from utils.json_utils import carregar_dados
 import os
 import json
 
+BASE_DIR = os.path.join(".", "Documents", "Python studys")
+
 def show():
     st.title("📊 Exportar Produções para Excel")
-    DATA_DIR = "data"
+    DATA_DIR = os.path.join(BASE_DIR, "data")
     ARQ_PRODUCOES = os.path.join(DATA_DIR, "producoes.json")
     producoes = carregar_dados(ARQ_PRODUCOES)
     st.markdown("""

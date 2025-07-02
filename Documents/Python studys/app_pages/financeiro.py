@@ -3,6 +3,8 @@ from app_pages.login import load_users
 import json
 import os
 
+BASE_DIR = os.path.join(".", "Documents", "Python studys")
+
 def show():
     st.title("💰 Visão Geral Financeira")
     st.info("Aqui será exibido o resumo financeiro da empresa.")

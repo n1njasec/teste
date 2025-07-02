@@ -4,10 +4,12 @@ import os
 import json
 from datetime import datetime
 
+# Caminho base absoluto para arquivos de dados
+BASE_DIR = os.path.join(".", "Documents", "Python studys")
+
 def show():
     st.title("⚙️ Produções")
-    # Define caminhos dos arquivos de dados
-    DATA_DIR = "data"
+    DATA_DIR = os.path.join(BASE_DIR, "data")
     ARQ_PRODUCOES = os.path.join(DATA_DIR, "producoes.json")
     ARQ_FUNCIONARIOS = os.path.join(DATA_DIR, "funcionarios.json")
     ARQ_PRODUTOS = os.path.join(DATA_DIR, "produtos.json")

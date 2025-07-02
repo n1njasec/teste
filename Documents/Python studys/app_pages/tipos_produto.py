@@ -3,9 +3,11 @@ from utils.json_utils import carregar_dados, salvar_dados
 import os
 import json
 
+BASE_DIR = os.path.join(".", "Documents", "Python studys")
+
 def show():
     st.title("🏷️ Tipos de Produto")
-    DATA_DIR = "data"
+    DATA_DIR = os.path.join(BASE_DIR, "data")
     TIPOS_PRODUTO_PATH = os.path.join(DATA_DIR, "tipos_produto.json")
     # Função interna para carregar tipos de produto do arquivo
     def carregar_tipos_produto():

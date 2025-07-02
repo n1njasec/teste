@@ -2,6 +2,8 @@ import streamlit as st
 import os
 import json
 
+BASE_DIR = os.path.join(".", "Documents", "Python studys")
+
 # Função principal da página de estoque
 def show():
     st.title("📦 Visão Geral do Estoque")

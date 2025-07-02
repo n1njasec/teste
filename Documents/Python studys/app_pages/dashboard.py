@@ -5,6 +5,8 @@ from utils.json_utils import carregar_dados
 import os
 import json
 
+BASE_DIR = os.path.join(".", "Documents", "Python studys")
+
 # Função principal da página de dashboard
 def show():
     # Título e cabeçalho visual
@@ -15,7 +17,7 @@ def show():
         </div>
     """, unsafe_allow_html=True)
     # Carrega dados dos arquivos principais
-    DATA_DIR = "data"
+    DATA_DIR = os.path.join(BASE_DIR, "data")
     ARQ_PRODUTOS = os.path.join(DATA_DIR, "produtos.json")
     ARQ_FUNCIONARIOS = os.path.join(DATA_DIR, "funcionarios.json")
     ARQ_PRODUCOES = os.path.join(DATA_DIR, "producoes.json")
