@@ -9,7 +9,7 @@ def hash_password(password):
 
 # Carrega lista de usuários do arquivo JSON
 def load_users():
-    path = os.path.join("data", "usuarios.json")
+    path = os.path.join(".", "data", "usuarios.json")
     if not os.path.exists(path):
         return []
     with open(path, "r", encoding="utf-8") as f:

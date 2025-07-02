@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Streamlit
+.streamlit/
+
+# Dados temporários e arquivos de ambiente
+.env
+*.env
+*.sqlite3
+*.db
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Não ignore a pasta data/ nem usuarios.json!
+!data/
+!data/usuarios.json
