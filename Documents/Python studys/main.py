@@ -1,19 +1,16 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from app_pages import produtos, funcionarios, producoes, tipos_produto, estoque, financeiro, dashboard, relatorio_excel, login, admin
-import os
 
-# --- Login temporariamente desativado ---
+# --- Login removido: qualquer um acessa tudo ---
 # if "usuario" not in st.session_state:
 #     login.show_login()
 #     st.stop()
 
 # --- Menu lateral ---
 with st.sidebar:
-    # Saudação personalizada
-    st.title(f"👋 Olá, {st.session_state.get('usuario', 'Usuário')}")
+    st.title("👋 Olá, visitante!")
     st.markdown("---")
-    # Menu principal com ícones e navegação
     menu_lateral = option_menu(
         "Menu",
         [
@@ -29,18 +26,22 @@ with st.sidebar:
     )
     st.markdown("---")
 
+# --- DEBUG: Lista arquivos do diretório do projeto ---
+import os
+with st.expander("DEBUG: Arquivos do projeto"):
+    for root, dirs, files in os.walk("."):
+        for name in files:
+            st.write(os.path.join(root, name))
+
 # --- Roteamento das páginas ---
-# Painel Admin só para administradores
+# Painel Admin liberado para todos
 if menu_lateral == "Painel Admin":
-    if st.session_state.get("nivel") == "admin":
-        admin.show_admin()
-    else:
-        st.error("Acesso restrito ao administrador.")
+    admin.show_admin()
     st.stop()
 
-# Logout
+# Logout (apenas volta para o início)
 if menu_lateral == "Sair":
-    login.logout()
+    st.experimental_rerun()
     st.stop()
 
 # Chama a página correspondente conforme a opção escolhida
@@ -60,9 +61,3 @@ elif menu_lateral == "Financeiro":
     financeiro.show()
 elif menu_lateral == "Relatório Excel":
     relatorio_excel.show()
-
-# --- DEBUG: Lista arquivos do diretório do projeto ---
-with st.expander("DEBUG: Arquivos do projeto"):
-    for root, dirs, files in os.walk("."):
-        for name in files:
-            st.write(os.path.join(root, name))
