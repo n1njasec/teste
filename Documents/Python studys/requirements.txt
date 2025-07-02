@@ -1,0 +1,6 @@
+# Requisitos do sistema de gestão Streamlit
+streamlit
+streamlit-option-menu
+pandas
+plotly
+# Dependências padrão do Python (json, os, datetime) não precisam ser listadas
