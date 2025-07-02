@@ -5,7 +5,7 @@ from utils.json_utils import carregar_dados
 import os
 import json
 
-BASE_DIR = os.path.join(".", "Documents", "Python studys")
+BASE_DIR = os.path.join("..", "Python studys")
 
 # Função principal da página de dashboard
 def show():
