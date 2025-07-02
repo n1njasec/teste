@@ -1,11 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from app_pages import produtos, funcionarios, producoes, tipos_produto, estoque, financeiro, dashboard, relatorio_excel, login, admin
-
-# --- Login removido: qualquer um acessa tudo ---
-# if "usuario" not in st.session_state:
-#     login.show_login()
-#     st.stop()
+from app_pages import produtos, funcionarios, producoes, tipos_produto, estoque, financeiro, dashboard, relatorio_excel
 
 # --- Menu lateral ---
 with st.sidebar:
@@ -15,11 +10,11 @@ with st.sidebar:
         "Menu",
         [
             "Dashboard", "Produtos", "Funcionários", "Produções", "Tipos de Produto",
-            "Estoque", "Financeiro", "Relatório Excel", "Painel Admin", "Sair"
+            "Estoque", "Financeiro", "Relatório Excel", "Sair"
         ],
         icons=[
             'house', 'box', 'people', 'gear', 'tag', 'archive', 'bar-chart',
-            'file-earmark-excel', 'tools', 'box-arrow-right'
+            'file-earmark-excel', 'box-arrow-right'
         ],
         menu_icon="cast",
         default_index=0,
@@ -34,17 +29,6 @@ with st.expander("DEBUG: Arquivos do projeto"):
             st.write(os.path.join(root, name))
 
 # --- Roteamento das páginas ---
-# Painel Admin liberado para todos
-if menu_lateral == "Painel Admin":
-    admin.show_admin()
-    st.stop()
-
-# Logout (apenas volta para o início)
-if menu_lateral == "Sair":
-    st.experimental_rerun()
-    st.stop()
-
-# Chama a página correspondente conforme a opção escolhida
 if menu_lateral == "Dashboard":
     dashboard.show()
 elif menu_lateral == "Produtos":
@@ -61,3 +45,6 @@ elif menu_lateral == "Financeiro":
     financeiro.show()
 elif menu_lateral == "Relatório Excel":
     relatorio_excel.show()
+elif menu_lateral == "Sair":
+    st.experimental_rerun()
+    st.stop()
